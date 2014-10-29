@@ -4,7 +4,8 @@
         <title>My Webpage</title>
     </head>
     <body>
-		<video src="/videos/{{ user_id }}/{{ video_name }}">
+		<video loop autoplay controls>
+			<source src="/videos/{{ user_id }}/{{ video_name }}" type="video/webm"/> 
 			HTML5 not supported!
 		</video>
     </body>
