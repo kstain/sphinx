@@ -1,0 +1,12 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html lang="en">
+    <head>
+        <title>My Webpage</title>
+    </head>
+    <body>
+		<video loop autoplay controls>
+			<source src="/videos/{{ user_id }}/{{ video_name }}" type="video/webm"/> 
+			HTML5 not supported!
+		</video>
+    </body>
+</html>
