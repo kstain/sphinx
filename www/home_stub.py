@@ -1,10 +1,8 @@
 from flask import Blueprint
 from flask import render_template
 
-from sphinx.www.base import *
+site = Blueprint('home_site_stub', 'sphinx.www.home_stub')
 
-home_site = Blueprint('home_stub', 'sphinx.www.home_stub')
-
-@test_site.route('/', methods=['GET'])
+@site.route('/', methods=['GET'])
 def home_site():
-    return render_template('templates/_top.html')
+    return render_template('_top.html')
