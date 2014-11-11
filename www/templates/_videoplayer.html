@@ -3,48 +3,25 @@
 <head>
     {% include '_pagehead.html' %}
 
-    <title>{{ TITLE HERE }}</title>
+    <title>{{ 'Nyanya' }}</title>
 
 </head>
 
 <body>
 
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-            <div class="navbar-header">
-                <a class="navbar-brand" href="#">Leggie leggie视频</a>
-            </div>
-            <div id="navbar" class="navbar-collapse collapse">
+{% include '_globalNavi.html' %}
 
-                <div class="navbar-form navbar-right">
-                    <a href="#" class="btn btn-success">上传视频</a>
-                </div>
-                <form class="navbar-form navbar-right" role="form">
-
-                    <input type="text" placeholder="搜索..." class="form-control" />
-
-                    <button type="submit" class="btn btn-success">搜索</button>
-                </form>
-                <div class="navbar-form navbar-right">
-                    <a href="#" class="btn btn-success">登录</a>
-                    <a href="#" class="btn btn-success">注册账号</a>
-                </div>
-
-
-
-            </div>
-            <!--/.navbar-collapse -->
-        </div>
-    </nav>
-
-    <div>
-        <h1>视频</h1>
+    <div id="VideoPlayer">
+        <h1>{{video.title}}</h1>
+		<video autoplay controls>
+			<source src="/videos/{{ video.userid }}/{{ video.videoid }}.webm" type="video/webm"/>
+		</video>
     </div>
 
-    <div>
+    <div id="Description">
         <h1>简介</h1>
     </div>
-    <div>
+    <div id="Comments">
         <h1>评论区</h1>
     </div>
 
