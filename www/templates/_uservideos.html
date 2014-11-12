@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html lang="chs">
+<head>
+    {% include '_pagehead.html' %}
+
+    <title>{{ 'Nyanyanya!' }}</title>
+
+</head>
+
+<body>
+
+{% include '_globalNavi.html' %}
+    <div>
+        <h1>视频列表</h1>
+		<table>
+			{% for row in VideoList|batch(3) -%}
+				<div class="row">
+					{% for item in row -%}
+						<div class="col-md-3">
+							<a class="thumbnail" href="/video/play/{{item.videoid}}">
+                                <p><img src="/videothumbs/{{item.userid}}/{{item.videoid}}"/></p>
+                                <div class="caption">
+                                    <h3>{{item.title}}</h3>
+                                    <p>播放数：{{item.playcount}}</p>
+                                </div>
+                            </a>
+						</div>
+					{%- endfor %}
+				</div>
+			{%- endfor %}
+		</table>
+    </div>
+
+    <div>
+
+
+    <hr>
+    {% include '_footer.html' %}
+    </div>
+    <!-- /container -->
+
+
+
+</body>
+
+{% include '_footerIncludeScript.html' %}
+</html>
