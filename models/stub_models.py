@@ -5,6 +5,6 @@ class Video:
         self.videoid = vid
         self.playcount = cnt
         
-class User
+class User:
     def __init__(self,name):
         self.name = name
