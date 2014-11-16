@@ -1,7 +1,7 @@
 from flask import render_template
 from flask import Blueprint
 
-site = Blueprint('test_site', 'sphinx.www.test')
+site = Blueprint('test', 'www.test')
 
 @site.route('/hello/<uid>', methods=['GET'])
 def hello(uid):

@@ -1,3 +1,3 @@
 from flask import Blueprint
 
-site = Blueprint('user_site', 'sphinx.www.user')
+site = Blueprint('user', 'www.user')

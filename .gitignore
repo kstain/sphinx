@@ -1,0 +1,8 @@
+.*
+*.old
+*.pyc
+local/*
+*.local
+venv
+
+!.gitignore
